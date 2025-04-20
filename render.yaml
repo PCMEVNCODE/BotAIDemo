@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: discord-bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: a_ge
+        fromEnvVar: a_ge
+      - key: token_b
+        fromEnvVar: token_b
