@@ -1,10 +1,6 @@
 import discord  
 # Cấu hình API Gemini (Hãy thay API key bằng biến môi trường)
 from google import genai
-
-# Đổi tên biến để tránh xung đột
-genai_client = genai.Client(api_key=msub.a_ge)
-
 # FILE CODE SUB FOR MAIN FILE
 # <DEVLOPER> >> DANH DEV
 #
@@ -25,6 +21,8 @@ a_ge = "AIzaSyCR6laHkZeWHVSiEx5l-vsYa8BfU-Mhseg"
 #____________________________________________________________________________________________
 # API for deepseek
 d_api = "sk-ee28221a8a7c47e2b700879218cce84d"
+# Đổi tên biến để tránh xung đột
+genai_client = genai.Client(api_key=a_ge)
 
 
 class MyClient(discord.Client):
