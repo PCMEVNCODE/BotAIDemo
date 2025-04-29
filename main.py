@@ -8,7 +8,7 @@ from google import genai
 #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
 
 # id token for discord bot _>>>
-tapi = "MTM2MzE0NTA2NzQ4OTAwNTc1OQ.Grr-W8.z4oCPY8v7WQszlXF8FJ-NHVdaHf-MLIMo1SqjY"
+tapi = "MTM2MzE0NTA2NzQ4OTAwNTc1OQ.GU3Nl5.PW-hVPxZfUkZN3PMwQDj27L6X1kw3YIX42LfwU"
 #____________________________________________________________________________________________
 # CHANNEL_ID >>>>
 CH_ID = 1363158722242805841
