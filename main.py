@@ -1,4 +1,5 @@
 import discord  
+import msub
 # Cấu hình API Gemini (Hãy thay API key bằng biến môi trường)
 from google import genai
 # FILE CODE SUB FOR MAIN FILE
@@ -22,16 +23,16 @@ a_ge = "AIzaSyCR6laHkZeWHVSiEx5l-vsYa8BfU-Mhseg"
 # API for deepseek
 d_api = "sk-ee28221a8a7c47e2b700879218cce84d"
 # Đổi tên biến để tránh xung đột
-genai_client = genai.Client(api_key=a_ge)
+genai_client = genai.Client(api_key=msub.a_ge)
 
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'>>>Bot started : {self.user}')
-        channel = self.get_channel(CH_ID)
+        channel = self.get_channel(msub.CH_ID)
         
         if channel is None:
-            print(f"Lỗi: Không tìm thấy kênh với ID {CH_ID}.")
+            print(f"Lỗi: Không tìm thấy kênh với ID {msub.CH_ID}.")
             return
         
         await channel.send('<<<----Bot started successfully---->>>')
@@ -57,7 +58,7 @@ class MyClient(discord.Client):
                             for chunk in [response.text[i:i+2000] for i in range(0, len(response.text), 2000)]:
                                 await message.channel.send(chunk)
                         else:
-                            await message.channel.send(response.text        )
+                            await message.channel.send(response.text)
                         print(f">>Bot answered for <{message.author.name}>")
                     else:
                         await message.channel.send("Bot hiện không có phản hồi nào. Vui lòng nhắn nội dung khác!")
@@ -70,4 +71,4 @@ intents.message_content = True
 
 # Giữ tên client cho Discord bot
 client = MyClient(intents=intents)
-client.run(tapi)
+client.run(msub.tapi)
